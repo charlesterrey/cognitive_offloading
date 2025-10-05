@@ -2,12 +2,12 @@
 
 ## Résumé Exécutif
 
-Ce repository contient l'implémentation complète et reproductible du modèle NEUROMODE, une architecture computationnelle unifiée pour l'étude quantitative de l'impact de l'utilisation d'assistants d'intelligence artificielle sur la connectivité et la plasticité neuronales. Le modèle intègre des mécanismes neurobiologiques validés expérimentalement pour simuler les processus d'offloading cognitif et leurs conséquences sur le développement neural.
+Ce repository contient l'implémentation complète et reproductible du modèle développé lors de notre mémoire, une architecture computationnelle unifiée pour l'étude quantitative de l'impact de l'utilisation d'assistants d'intelligence artificielle sur la connectivité et la plasticité neuronales. Le modèle intègre des mécanismes neurobiologiques validés expérimentalement pour simuler les processus d'offloading cognitif et leurs conséquences sur le développement neural.
 
 ## Informations de Publication
 
 **Statut** : Modèle validé et prêt pour publication académique  
-**Version** : 1.0.0  
+**Version** : 2.4.8  
 **Date de validation** : Septembre 2025  
 **Licence** : MIT (usage académique et recherche)
 
@@ -25,7 +25,7 @@ Ce repository contient l'implémentation complète et reproductible du modèle N
 
 ### Modèle Computationnel Unifié
 
-Le modèle NEUROMODE intègre six mécanismes neurobiologiques (S1-S6) :
+Le modèle intègre six mécanismes neurobiologiques (S1-S6) :
 
 #### S1 : Réseau Neuronal de Base
 - **Neurones LIF** (Leaky Integrate-and-Fire) avec conductances synaptiques
@@ -58,7 +58,7 @@ Le modèle NEUROMODE intègre six mécanismes neurobiologiques (S1-S6) :
 ## Structure du Repository
 
 ```
-NEUROMODE_ACADEMIQUE/
+Cognitive_Offloading/
 ├── models/                     # Modèles computationnels validés
 │   ├── unified_neuromode.py   # Architecture principale
 │   ├── base_components.py     # Composants neurobiologiques
@@ -226,8 +226,8 @@ Ce projet est distribué sous licence MIT pour usage académique et de recherche
 ## Contact et Support
 
 **Développeur principal** : Charles Terrey  
-**Institution** : [À compléter]  
-**Email** : [À compléter]  
+**Institution** : Hec Paris 
+**Email** : charles.terrey@hec.edu  
 **Issues GitHub** : https://github.com/charlesterrey/neuromode-academique/issues
 
 ---
