@@ -1,0 +1,40 @@
+# NEUROMODE Academic Repository
+# Modélisation Computationnelle de l'Impact de l'IA sur la Plasticité Neuronale
+
+# Version et versions exactes requises pour reproductibilité
+python>=3.8,<3.12
+numpy==1.21.6
+scipy==1.7.3
+pandas==1.3.5
+matplotlib==3.5.3
+seaborn==0.11.2
+scikit-learn==1.0.2
+
+# Simulation neuronale (Brian2 ecosystem)
+brian2==2.6.0
+cython==0.29.32
+
+# Analyses statistiques avancées
+statsmodels==0.13.5
+pingouin==0.5.3
+
+# Utilitaires et performance
+tqdm==4.64.1
+joblib==1.2.0
+h5py==3.7.0
+psutil==5.9.4
+
+# Tests et validation
+pytest==7.2.0
+pytest-cov==4.0.0
+
+# Documentation
+sphinx==5.3.0
+sphinx-rtd-theme==1.1.1
+
+# Optionnel : Visualisation avancée
+plotly==5.11.0
+ipywidgets==8.0.4
+
+# Optionnel : Parallélisation avancée
+dask==2022.12.1

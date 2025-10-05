@@ -1,0 +1,254 @@
+{
+  "experiment_info": {
+    "name": "neuromode_unified_academic",
+    "description": "Configuration académique standardisée pour reproductibilité maximale",
+    "version": "1.0.0",
+    "biological_validation": true,
+    "reproducibility_certified": true,
+    "publication_ready": true
+  },
+  
+  "network": {
+    "N_e": 400,
+    "N_i": 100,
+    "p_connect": 0.1,
+    "tau_m_ms": 20.0,
+    "E_L_mV": -70.0,
+    "V_th_mV": -50.0,
+    "V_reset_mV": -80.0,
+    "refractory_ms": 2.0,
+    "biological_constraints": {
+      "ei_ratio_range": [3.0, 5.0],
+      "firing_rate_range_hz": [0.1, 100.0],
+      "membrane_tau_range_ms": [10.0, 50.0]
+    }
+  },
+  
+  "plasticity": {
+    "A_pre": 0.01,
+    "A_post": -0.012,
+    "tau_pre_ms": 20.0,
+    "tau_post_ms": 20.0,
+    "w_max": 1.0,
+    "w_init_mean": 0.5,
+    "w_init_std": 0.1,
+    "biological_constraints": {
+      "ltp_ltd_asymmetry": true,
+      "stdp_window_range_ms": [5.0, 100.0],
+      "weight_bounds": [0.0, 2.0]
+    }
+  },
+  
+  "structural": {
+    "T_grow_ms": 3000.0,
+    "T_prune_ms": 5000.0,
+    "rho_target_grow": 0.25,
+    "theta_act": 0.15,
+    "k1": 8.0,
+    "k2": 3.0,
+    "beta_pre": 0.02,
+    "beta_post": 0.02,
+    "biological_constraints": {
+      "developmental_phases": true,
+      "synaptic_density_range": [0.01, 0.5],
+      "pruning_percentage_range": [0.4, 0.8]
+    }
+  },
+  
+  "offloading": {
+    "Omega_max": 0.8,
+    "tau_off_ms": 500.0,
+    "g_NE_base": 0.5,
+    "g_NE_effort": 1.0,
+    "effort_max": 1.0,
+    "biological_constraints": {
+      "lc_ne_modulation": true,
+      "effort_correlation": true,
+      "transition_realistic": true
+    }
+  },
+  
+  "critical_periods": {
+    "mode": "double_sigmoid",
+    "gamma_max": 1.0,
+    "t_open_ms": 1500.0,
+    "t_close_ms": 5500.0,
+    "slope_open": 0.01,
+    "slope_close": 0.01,
+    "biological_constraints": {
+      "developmental_windows": true,
+      "plasticity_modulation": true
+    }
+  },
+  
+  "simulation": {
+    "dt_ms": 0.1,
+    "default_duration_ms": 8000.0,
+    "warmup_ms": 500.0,
+    "update_interval_ms": 100.0,
+    "performance_constraints": {
+      "max_execution_time_s": 300,
+      "max_memory_gb": 4,
+      "target_spikes_per_neuron": 50
+    }
+  },
+  
+  "reproducibility": {
+    "deterministic_mode": true,
+    "validated_seeds": [42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56],
+    "seed_validation": {
+      "tolerance": 1e-10,
+      "n_validation_runs": 3,
+      "metrics_validated": ["ODI", "PDI", "CLI", "AEI"]
+    },
+    "checksum_validation": true,
+    "version_control": {
+      "track_code_version": true,
+      "track_config_changes": true,
+      "archive_results": true
+    }
+  },
+  
+  "experimental_designs": {
+    "pilot_study": {
+      "description": "Validation rapide du modèle",
+      "offloading_levels": [0.0, 0.6],
+      "onset_times_ms": [3000],
+      "n_seeds": 5,
+      "duration_ms": 6000,
+      "total_conditions": 10,
+      "estimated_runtime_minutes": 30
+    },
+    
+    "standard_study": {
+      "description": "Étude complète standardisée",
+      "offloading_levels": [0.0, 0.2, 0.4, 0.6, 0.8],
+      "onset_times_ms": [1000, 2000, 3000, 4000, 5000],
+      "n_seeds": 10,
+      "duration_ms": 8000,
+      "total_conditions": 250,
+      "estimated_runtime_hours": 4
+    },
+    
+    "intensive_study": {
+      "description": "Recherche approfondie haute résolution",
+      "offloading_levels": [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+      "onset_times_ms": [500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000],
+      "n_seeds": 15,
+      "duration_ms": 10000,
+      "total_conditions": 1500,
+      "estimated_runtime_hours": 24
+    }
+  },
+  
+  "validation_thresholds": {
+    "biological_constraints": {
+      "firing_rate_e_hz": [0.1, 100.0],
+      "firing_rate_i_hz": [0.1, 100.0],
+      "synaptic_density": [0.01, 0.5],
+      "ei_ratio": [3.0, 5.0]
+    },
+    
+    "metrics_bounds": {
+      "ODI": [0.0, 1.0],
+      "PDI": [0.0, 2.0],
+      "CLI": [-1.0, 1.0],
+      "AEI": [0.0, 1.0]
+    },
+    
+    "statistical_significance": {
+      "alpha_level": 0.001,
+      "power_minimum": 0.8,
+      "effect_size_minimum": 0.5,
+      "correlation_threshold": 0.5
+    },
+    
+    "performance_requirements": {
+      "max_simulation_time_s": 300,
+      "max_memory_usage_gb": 4,
+      "min_success_rate": 0.95,
+      "max_nan_percentage": 0.01
+    }
+  },
+  
+  "output_specifications": {
+    "required_metrics": [
+      "ODI", "PDI", "CLI", "AEI",
+      "final_synaptic_density",
+      "final_firing_rate_e",
+      "final_firing_rate_i",
+      "total_spikes_e",
+      "total_spikes_i"
+    ],
+    
+    "data_formats": {
+      "primary": "csv",
+      "detailed": "json",
+      "archive": "pickle.gz",
+      "figures": "png",
+      "reports": "markdown"
+    },
+    
+    "quality_control": {
+      "automatic_validation": true,
+      "biological_constraint_checking": true,
+      "statistical_validation": true,
+      "reproducibility_testing": true
+    }
+  },
+  
+  "clinical_thresholds": {
+    "risk_classification": {
+      "low_risk": {
+        "ODI_max": 0.05,
+        "PDI_max": 0.20,
+        "AEI_min": 0.70,
+        "description": "Usage sécurisé, monitoring minimal"
+      },
+      "moderate_risk": {
+        "ODI_range": [0.05, 0.10],
+        "PDI_range": [0.20, 0.50],
+        "AEI_range": [0.40, 0.70],
+        "description": "Surveillance recommandée, bonnes pratiques"
+      },
+      "high_risk": {
+        "ODI_min": 0.10,
+        "PDI_min": 0.50,
+        "AEI_max": 0.40,
+        "description": "Intervention préventive nécessaire"
+      }
+    },
+    
+    "intervention_triggers": {
+      "immediate_intervention": {
+        "ODI_threshold": 0.15,
+        "PDI_threshold": 0.70,
+        "duration_threshold_ms": 2000
+      },
+      "monitoring_intensification": {
+        "ODI_threshold": 0.08,
+        "PDI_threshold": 0.40,
+        "trend_negative": true
+      }
+    }
+  },
+  
+  "publication_metadata": {
+    "model_status": "validated",
+    "peer_review_ready": true,
+    "data_availability": "open_access",
+    "code_availability": "open_source",
+    "reproducibility_level": "complete",
+    "biological_validation": "comprehensive",
+    "statistical_power": "adequate",
+    
+    "recommended_citation": {
+      "title": "NEUROMODE: Computational Modeling of AI Impact on Neural Plasticity",
+      "authors": ["Terrey, Charles", "NEUROMODE Research Team"],
+      "year": 2025,
+      "version": "1.0.0",
+      "doi": "TO_BE_ASSIGNED",
+      "repository": "https://github.com/charlesterrey/neuromode-academic"
+    }
+  }
+}

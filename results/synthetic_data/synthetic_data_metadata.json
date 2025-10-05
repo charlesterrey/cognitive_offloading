@@ -1,0 +1,55 @@
+{
+  "generation_info": {
+    "generator_version": "1.0.0",
+    "generation_date": "2025-10-05",
+    "seed": 42,
+    "n_observations": 180,
+    "synthetic_data": true
+  },
+  "data_characteristics": {
+    "noise_level": 0.1,
+    "individual_variance": 0.05,
+    "constraints_applied": {
+      "ODI": [
+        0.0,
+        0.3
+      ],
+      "PDI": [
+        0.0,
+        1.0
+      ],
+      "CLI": [
+        0.0,
+        1.0
+      ],
+      "AEI": [
+        0.0,
+        1.0
+      ],
+      "synaptic_density": [
+        0.05,
+        0.4
+      ],
+      "firing_rate": [
+        1.0,
+        50.0
+      ],
+      "neuromodulation": [
+        0.3,
+        1.8
+      ]
+    }
+  },
+  "hypothesis_patterns": {
+    "H1_dose_response": "ODI = f(Ω) avec r ≈ 0.77",
+    "H2_timing_effect": "Amplification pour t₀ précoce",
+    "H3_nonlinear": "Seuils à Ω = 0.3 et 0.6",
+    "H4_mediation": "Ω → Neuromodulation → ODI"
+  },
+  "validation_use": {
+    "statistical_power": "Test puissance analyses",
+    "method_validation": "Validation méthodes statistiques",
+    "demonstration": "Démonstration effets attendus",
+    "training": "Formation utilisateurs"
+  }
+}
