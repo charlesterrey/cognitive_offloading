@@ -1,7 +1,7 @@
 {
   "experiment_info": {
-    "name": "neuromode_unified_academic",
-    "description": "Configuration académique standardisée pour reproductibilité maximale",
+    "name": "cognitive_offloading",
+    "description": "Configuration standardisée pour reproductibilité maximale",
     "version": "1.0.0",
     "biological_validation": true,
     "reproducibility_certified": true,
@@ -244,11 +244,11 @@
     
     "recommended_citation": {
       "title": "NEUROMODE: Computational Modeling of AI Impact on Neural Plasticity",
-      "authors": ["Terrey, Charles", "NEUROMODE Research Team"],
+      "authors": ["Terrey, Charles"],
       "year": 2025,
       "version": "1.0.0",
-      "doi": "TO_BE_ASSIGNED",
-      "repository": "https://github.com/charlesterrey/neuromode-academic"
+      "doi":
+      "repository": "https://github.com/charlesterrey/cognitive_offloading"
     }
   }
 }
