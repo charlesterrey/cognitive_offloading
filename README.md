@@ -1,4 +1,4 @@
-# NEUROMODE : Modélisation Computationnelle de l'Impact de l'Intelligence Artificielle sur la Plasticité Neuronale
+# Modélisation Computationnelle de l'Impact de l'Intelligence Artificielle sur la Plasticité Neuronale
 
 ## Résumé Exécutif
 
