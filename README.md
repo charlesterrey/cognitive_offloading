@@ -231,6 +231,6 @@ Ce projet est distribué sous licence MIT pour usage académique et de recherche
 
 ---
 
-*Ce repository constitue la base computationnelle validée pour l'étude scientifique de l'impact de l'intelligence artificielle sur la plasticité neuronale. Il est conçu pour répondre aux standards les plus rigoureux de reproductibilité et de transparence scientifique.*
+*Ce repository constitue la base d'un modèle In Silico, permettant d'explorer les impacts de l'utilisation de l'IA Générative sur le développement cognitif afin d'évaluer ses principaux risques. Ce modèle comporte des limites explicitées dans le mémoire rédigé.*
 
 **Dernière mise à jour** : Octobre 2025
