@@ -211,8 +211,8 @@ python experiments/runners/run_full_study.py --config configs/experimental/full_
 ### Citation Recommandée
 ```bibtex
 @software{neuromode_2025,
-  title={NEUROMODE: Modélisation Computationnelle de l'Impact de l'IA sur la Plasticité Neuronale},
-  author={Terrey, Charles and Équipe de recherche NEUROMODE},
+  title={Modélisation Computationnelle de l'Impact de l'IA sur la Plasticité Neuronale},
+  author={Charles TERREY},
   year={2025},
   url={https://github.com/charlesterrey/neuromode-academique},
   version={1.0.0},
