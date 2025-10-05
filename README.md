@@ -228,7 +228,6 @@ Ce projet est distribué sous licence MIT pour usage académique et de recherche
 **Développeur principal** : Charles Terrey  
 **Institution** : Hec Paris 
 **Email** : charles.terrey@hec.edu  
-**Issues GitHub** : https://github.com/charlesterrey/neuromode-academique/issues
 
 ---
 
